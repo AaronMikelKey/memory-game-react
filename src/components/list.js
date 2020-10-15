@@ -1,5 +1,7 @@
 const imgList = [
-    {name: "Australian Cattle Dog", url: "https://images.unsplash.com/photo-1602431694956-0da68eb649b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1232&q=80", description: ""},
+    {name: "Australian Cattle Dog", 
+        url: "https://images.unsplash.com/photo-1602431694956-0da68eb649b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1232&q=80", 
+        description: "Sometimes called a Blue Heeler, the Australian Cattle Dog is a herding dog originating in Australia."},
     {name: "Basset Hound", url: "", description: ""},
     {name: "Beagle", url: "", description: ""},
     {name: "Border Collie", url: "", description: ""},

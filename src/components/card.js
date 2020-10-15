@@ -1,16 +1,19 @@
 import React from 'react';
-import Doggo from '../components/image';
-import imglist from '../images/list';
+import imglist from './list';
 
-//doggo(imgList, index)
+
 const Card = () => {
     const list = imglist;
-    return (
-        <div>
-            <Doggo imglist={ list } index={0}/>
-            <p> { imglist.name } </p>
-        </div>
-    )
+
+    return list.map(item => {
+        return (
+            <div className="card" key={ item.name }>
+                <h4>  { item.name } </h4>
+                <h4> { item.description } </h4>
+                <img src={ item.url } alt={ item.name } />
+            </div>
+        );
+   })
 }
 
 export default Card;
