@@ -8,7 +8,8 @@ Your goal is to click each breed ONLY once.  Once you have clicked a breed, the 
 
 The game will also keep track of what your highest score is.
 
-Full list of breeds chosen from akc.org:
+Full list of breeds chosen from wikipedia:
+(Note: There are many more good boyes and girls than just these, I chose this list based on dog breeds I know of personally)
 
 - [Australian Cattle Dog](https://en.wikipedia.org/wiki/Australian_Cattle_Dog) 
 - [Basset Hound](https://en.wikipedia.org/wiki/Basset_Hound) 
