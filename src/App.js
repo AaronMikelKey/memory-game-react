@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Card from './components/card';
-import useStateCallback from './components/useStateCallback';
 import winOrLose from './components/WinOrLose';
+import { Header, Footer } from './components/Sandwich.js'
 
 const App = () => {
-  const [game, setGame] = useState(0);
+  const [game, setGame] = useState(null);
   const [arr, setArr] = useState([]);
   const [score, setScore] = useState(0);
-  const [winState, setWinState] = useState(true);
 
   const gameMode = (e) => {
     setGame(e.target.id)
   }
 
   useEffect(() => {
-    console.log('Arr', arr);
+    setTimeout(50);
   }, [arr]);
   useEffect(() => {
-    console.log('score', score);
+    setTimeout(50);
   }, [score]);
-  useEffect(() => {
-    console.log(winState);
-  });
 
   const checkClicked = (e) => {
     console.log(game);
@@ -35,29 +31,37 @@ const App = () => {
         setArr([...arr, e.target.parentNode.id]);
       };
       setScore(previousScore => previousScore + 1 );
-      console.log(score);
     } else {
-      setWinState(false);
+      alert("You lose");
+      setGame(null);
+
   }
-    winOrLose(score, game, winState);
+    winOrLose(score, game);
   }
 
-  if (game === 0) {
+  if (game === null) {
     return (
+      <div className="App">
+        <Header />
       <div className="dogs" >
         <div className="buttons">
           <button id="12" onClick={gameMode}>Play with 12 cards</button>
           <button id="24" onClick={gameMode}>Play with 24 cards</button>
           <button id="36" onClick={gameMode}>Play with 36 cards</button>
           <button id="50" onClick={gameMode}>Play with 50 cards</button>
+          <div className="info" >Choose how many cards to play with and then click each dog breed ONLY one time.  Once you have clicked them all you win and can select another mode to play.</div>
         </div>
+      </div>
+        <Footer />
       </div>
     )
   } else {
 
     return (
       <div className="App">
+        <Header />
         <Card click={checkClicked} mode={game} />
+        <Footer />
       </div>
     );
   }
