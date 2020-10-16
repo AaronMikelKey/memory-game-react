@@ -1,5 +1,5 @@
 const winOrLose = (score, max, bool) => {
-    if (score === max - 1) {
+    if (score === max) {
         alert("You win!")
         window.location.reload();
     } else if (bool === false) {

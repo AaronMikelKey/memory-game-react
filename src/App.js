@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Card from './components/card';
-import winOrLose from './components/WinOrLose'
+import useStateCallback from './components/useStateCallback';
+import winOrLose from './components/WinOrLose';
 
 const App = () => {
   const [game, setGame] = useState(0);
@@ -19,6 +20,9 @@ const App = () => {
   useEffect(() => {
     console.log('score', score);
   }, [score]);
+  useEffect(() => {
+    console.log(winState);
+  });
 
   const checkClicked = (e) => {
     console.log(game);
@@ -30,21 +34,23 @@ const App = () => {
       } else {
         setArr([...arr, e.target.parentNode.id]);
       };
-      setScore(score + 1);
+      setScore(previousScore => previousScore + 1 );
       console.log(score);
     } else {
       setWinState(false);
-    }
+  }
     winOrLose(score, game, winState);
   }
 
   if (game === 0) {
     return (
-      <div className="buttons">
-        <button id="12" onClick={gameMode}>Play with 12 cards</button>
-        <button id="24" onClick={gameMode}>Play with 24 cards</button>
-        <button id="36" onClick={gameMode}>Play with 36 cards</button>
-        <button id="50" onClick={gameMode}>Play with 50 cards</button>
+      <div className="dogs" >
+        <div className="buttons">
+          <button id="12" onClick={gameMode}>Play with 12 cards</button>
+          <button id="24" onClick={gameMode}>Play with 24 cards</button>
+          <button id="36" onClick={gameMode}>Play with 36 cards</button>
+          <button id="50" onClick={gameMode}>Play with 50 cards</button>
+        </div>
       </div>
     )
   } else {

@@ -1,13 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+
+html, body {
+  height: 100%;
+  background-color: #ffd6a7;
+  text-align: center;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.dogs {
+  height: 100%;
+  width: 100%;
+  background: 
+    url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Bronco_the_Beagle.JPG/1920px-Bronco_the_Beagle.JPG) top left no-repeat, 
+    url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Boykin_spaniel.jpg/1920px-Boykin_spaniel.jpg) top center no-repeat, 
+    url(https://upload.wikimedia.org/wikipedia/commons/6/65/Chihuahuasmoothcoat.jpg) top right no-repeat, 
+    url(https://upload.wikimedia.org/wikipedia/commons/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg) center right no-repeat, 
+    url(https://upload.wikimedia.org/wikipedia/commons/8/82/Golden_Retriever_standing_Tucker.jpg) center center no-repeat,
+    url(https://i.imgur.com/xSHS4dL.jpg) center left no-repeat,
+    url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Gizmo_the_Jack_Russell.jpg/1920px-Gizmo_the_Jack_Russell.jpg) bottom left no-repeat,
+    url(https://i.imgur.com/mcXucoW.jpg) bottom center no-repeat, 
+    url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Little_tootie.JPG/1920px-Little_tootie.JPG) bottom right no-repeat;
+    
+    background-size: 20%;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
 img {
   height: 200px;
   width: 200px;
+  border-radius: 5px;
 }
 
 .card {
+  display: inline-block;
   width: 330px;
   height: 400px;
   border: 2px solid black;
   text-align: center;
+  margin: 5px;
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -15,4 +56,31 @@ img {
 .card:hover {
   background-color: rgb(204, 204, 204);
   cursor: pointer;
+}
+
+.buttons {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+button {
+  text-align: center;
+  height: 40px;
+  background-color: #ffd6a7;
+  border-radius: 10px;
+  border: 3px solid #6a67a5;
+  font-size: large;
+  font-family: 'Sansita Swashed', cursive;
+  margin-top: 20px;;
+}
+
+button:hover {
+  transform: scaleY(1.05);
+  background-color: #fbffa7;
+}
+
+button:active {
+  transform: scaleY(0.95);
+  color: #494848;
 }

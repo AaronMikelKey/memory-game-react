@@ -7,16 +7,16 @@ const Card = (props) => {
     let newList;
     switch(props.mode) {
         
-        case 12:
+        case '12':
             newList = list12;
             break;
-        case 24:
+        case '24':
             newList = list24;
             break;
-        case 36:
+        case '36':
             newList = list36;
             break;
-        case 50:
+        case '50':
             newList = list;
             break;
         default: 
